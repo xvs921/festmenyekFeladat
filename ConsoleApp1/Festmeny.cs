@@ -62,10 +62,23 @@ namespace ConsoleApp1
         }
         public void Licit(int mertek)
         {
-            legmagasabbLicit = (legmagasabbLicit / 10) * 11;
+            int noveles=0;
+            if (mertek >= 10 && mertek <= 100)
+            {
+                noveles = 10 + (mertek / 10);
+            }
+            else
+            {
+                Console.WriteLine("Hiba! 10 és 100 közöti értéket adjon meg!");
+            }
+            legmagasabbLicit = (legmagasabbLicit / 10) * noveles;
             licitekSzama++;
             legmagasabbLicitIdeje = DateTime.Now;
         }
-
+        public void  Kiir()
+        {
+            Console.WriteLine("{0}:{1}({6})\n{2}\n{3}$ - {4}(összesen: {5} db)",festo,cim,elkelt,legmagasabbLicit,legmagasabbLicitIdeje,licitekSzama,stilus);
+        }
+        
     }
 }
