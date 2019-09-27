@@ -17,11 +17,11 @@ namespace ConsoleApp1
         public int LicitekSzama { get { return licitekSzama; } }
         int legmagasabbLicit;
         public int LegmagasabbLicit { get { return legmagasabbLicit; } }
-        DateTime legmagasabbLicitIdeje;
-        public DateTime LegmagasabbLicitIdeje
+        DateTime legutolsoLicitIdeje;
+        public DateTime LegutolsoLicitIdeje
         {
-            get { return legmagasabbLicitIdeje; }
-            set { legmagasabbLicitIdeje = value; }
+            get { return legutolsoLicitIdeje; }
+            set { legutolsoLicitIdeje = value; }
         }
         bool elkelt;
         public bool Elkelt {
@@ -50,14 +50,14 @@ namespace ConsoleApp1
             {
                 legmagasabbLicit = kezdetiLicit;
                 licitekSzama++;
-                legmagasabbLicitIdeje = DateTime.Now;// állítsa be a legutolsó licit idejét az aktuális időpontra.
+                legutolsoLicitIdeje = DateTime.Now;// állítsa be a legutolsó licit idejét az aktuális időpontra.
 
             }
             else if (licitekSzama > 0)
             {
                 legmagasabbLicit=(legmagasabbLicit/10)*11;
                 licitekSzama++;
-                legmagasabbLicitIdeje = DateTime.Now;// állítsa be a legutolsó licit idejét az aktuális időpontra.
+                legutolsoLicitIdeje = DateTime.Now;// állítsa be a legutolsó licit idejét az aktuális időpontra.
             }
         }
         public void Licit(int mertek)
@@ -73,7 +73,7 @@ namespace ConsoleApp1
             }
             legmagasabbLicit = (legmagasabbLicit / 10) * noveles;
             licitekSzama++;
-            legmagasabbLicitIdeje = DateTime.Now;
+            legutolsoLicitIdeje = DateTime.Now;
         }
         public void  Kiir()
         {
