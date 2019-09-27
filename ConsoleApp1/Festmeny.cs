@@ -77,7 +77,7 @@ namespace ConsoleApp1
         }
         public void  Kiir()
         {
-            Console.WriteLine("{0}:{1}({6})\n{2}\n{3}$ - {4}(összesen: {5} db)",festo,cim,elkelt,legmagasabbLicit,legmagasabbLicitIdeje,licitekSzama,stilus);
+            Console.WriteLine("{0}:{1}({6})\n{2}\n{3}$ - {4}(összesen: {5} db)",festo,cim,elkelt,legmagasabbLicit,legutolsoLicitIdeje,licitekSzama,stilus);
         }
         
     }
